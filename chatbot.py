@@ -109,7 +109,7 @@ class Chatbot:
 		return sent_msg, num_sent_bytes
 
 	def register_command(self, command_name, callback, cooldown=0):
-		self.command_methods[command_name] = Chatbot.DispatchInfo(callback, cooldown);
+		self.command_methods[command_name] = Chatbot.DispatchInfo(callback, cooldown)
 
 	def dispatch_command(self, msg: irc.Privmsg):
 		now = time.time()

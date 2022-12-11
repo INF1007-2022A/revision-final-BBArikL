@@ -18,8 +18,9 @@ def run_ch11_example():
 	ylimit = float(conf_file["votes"]["ylimit"])
 	votes_plot = VotesPlot(vote_values, ylimit)
 
-	# TODO: Construire un objet de type `MyBot` avec "logs" comme dossier de journaux, les citations extraites du JSON et le graphique déjà construit.
-	bot = ...
+	# TODO: Construire un objet de type `MyBot` avec "logs" comme dossier de journaux, les citations extraites du JSON
+	#  et le graphique déjà construit.
+	bot = MyBot("logs", quotes, votes_plot)
 	bot.connect_and_join(config.password, config.nickname, config.channel)
 	start_bot_and_show_plot(bot, bot.votes_plot)
 
